@@ -1,0 +1,618 @@
+
+*** Running vivado
+    with args -log cpu.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source cpu.tcl
+
+
+****** Vivado v2017.4 (64-bit)
+  **** SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+  **** IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source cpu.tcl -notrace
+Command: synth_design -top cpu -part xc7vx485tffg1157-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7vx485t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7vx485t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 1800 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 402.625 ; gain = 103.074
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'cpu' [C:/application/verilog/8_bits_cpu/8_bits_cpu.srcs/sources_1/new/cpu.v:23]
+INFO: [Synth 8-638] synthesizing module 'controller' [C:/application/verilog/8_bits_cpu/8_bits_cpu.srcs/sources_1/new/controller.v:23]
+	Parameter S0 bound to: 5'b00000 
+	Parameter PREPARE bound to: 5'b11111 
+	Parameter S1 bound to: 5'b00001 
+	Parameter S2 bound to: 5'b00010 
+	Parameter S3 bound to: 5'b00011 
+	Parameter LDO_1 bound to: 5'b00100 
+	Parameter LDO_2 bound to: 5'b00101 
+	Parameter LDO_3 bound to: 5'b00110 
+	Parameter LDO_4 bound to: 5'b00111 
+	Parameter LDA_1 bound to: 5'b01000 
+	Parameter LDA_2 bound to: 5'b01001 
+	Parameter LDA_3 bound to: 5'b01010 
+	Parameter LDA_4 bound to: 5'b01011 
+	Parameter STO_1 bound to: 5'b01100 
+	Parameter STO_2 bound to: 5'b01101 
+	Parameter STO_3 bound to: 5'b01110 
+	Parameter STO_4 bound to: 5'b01111 
+	Parameter PRE_1 bound to: 5'b10000 
+	Parameter PRE_2 bound to: 5'b10001 
+	Parameter LDM_1 bound to: 5'b10010 
+	Parameter OPERAL_1 bound to: 5'b10011 
+	Parameter OPERAL_2 bound to: 5'b10100 
+	Parameter OPERAL_3 bound to: 5'b10101 
+	Parameter OPERAL_4 bound to: 5'b10110 
+	Parameter OPERAL_5 bound to: 5'b10111 
+	Parameter OPERAS_1 bound to: 5'b11000 
+	Parameter OPERAS_2 bound to: 5'b11001 
+	Parameter OPERAS_3 bound to: 5'b11010 
+	Parameter JUMP_1 bound to: 5'b11011 
+	Parameter JUMP_2 bound to: 5'b11100 
+	Parameter JUMP_3 bound to: 5'b11101 
+	Parameter JUMP_4 bound to: 5'b11110 
+	Parameter NOP bound to: 4'b0000 
+	Parameter LDO bound to: 4'b0101 
+	Parameter LDA bound to: 4'b0110 
+	Parameter STO bound to: 4'b0111 
+	Parameter PRE bound to: 4'b1001 
+	Parameter LDM bound to: 4'b1010 
+	Parameter ADDI bound to: 4'b1100 
+	Parameter ADD bound to: 4'b1101 
+	Parameter LS bound to: 4'b1110 
+	Parameter RS bound to: 4'b1111 
+	Parameter B bound to: 4'b0001 
+	Parameter BEQ bound to: 4'b0010 
+	Parameter BLT bound to: 4'b0011 
+INFO: [Synth 8-226] default block is never used [C:/application/verilog/8_bits_cpu/8_bits_cpu.srcs/sources_1/new/controller.v:122]
+WARNING: [Synth 8-5788] Register state_reg in module controller is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/application/verilog/8_bits_cpu/8_bits_cpu.srcs/sources_1/new/controller.v:88]
+INFO: [Synth 8-256] done synthesizing module 'controller' (1#1) [C:/application/verilog/8_bits_cpu/8_bits_cpu.srcs/sources_1/new/controller.v:23]
+INFO: [Synth 8-638] synthesizing module 'rom' [C:/application/verilog/8_bits_cpu/8_bits_cpu.srcs/sources_1/new/rom.v:23]
+INFO: [Synth 8-256] done synthesizing module 'rom' (2#1) [C:/application/verilog/8_bits_cpu/8_bits_cpu.srcs/sources_1/new/rom.v:23]
+INFO: [Synth 8-638] synthesizing module 'ram' [C:/application/verilog/8_bits_cpu/8_bits_cpu.srcs/sources_1/new/ram.v:23]
+INFO: [Synth 8-256] done synthesizing module 'ram' (3#1) [C:/application/verilog/8_bits_cpu/8_bits_cpu.srcs/sources_1/new/ram.v:23]
+INFO: [Synth 8-638] synthesizing module 'program_counter' [C:/application/verilog/8_bits_cpu/8_bits_cpu.srcs/sources_1/new/program_counter.v:23]
+	Parameter B bound to: 4'b0001 
+	Parameter BEQ bound to: 4'b0010 
+	Parameter BLT bound to: 4'b0011 
+INFO: [Synth 8-256] done synthesizing module 'program_counter' (4#1) [C:/application/verilog/8_bits_cpu/8_bits_cpu.srcs/sources_1/new/program_counter.v:23]
+INFO: [Synth 8-638] synthesizing module 'instruction_register' [C:/application/verilog/8_bits_cpu/8_bits_cpu.srcs/sources_1/new/instruction_register.v:23]
+INFO: [Synth 8-256] done synthesizing module 'instruction_register' (5#1) [C:/application/verilog/8_bits_cpu/8_bits_cpu.srcs/sources_1/new/instruction_register.v:23]
+INFO: [Synth 8-638] synthesizing module 'accumulator' [C:/application/verilog/8_bits_cpu/8_bits_cpu.srcs/sources_1/new/accumulator.v:23]
+	Parameter REG bound to: 1'b0 
+	Parameter ALU bound to: 1'b1 
+INFO: [Synth 8-226] default block is never used [C:/application/verilog/8_bits_cpu/8_bits_cpu.srcs/sources_1/new/accumulator.v:42]
+INFO: [Synth 8-256] done synthesizing module 'accumulator' (6#1) [C:/application/verilog/8_bits_cpu/8_bits_cpu.srcs/sources_1/new/accumulator.v:23]
+INFO: [Synth 8-638] synthesizing module 'regs' [C:/application/verilog/8_bits_cpu/8_bits_cpu.srcs/sources_1/new/regs.v:23]
+	Parameter REG_OUT bound to: 2'b00 
+	Parameter ROM bound to: 2'b01 
+	Parameter RAM bound to: 2'b10 
+	Parameter AC bound to: 2'b11 
+INFO: [Synth 8-226] default block is never used [C:/application/verilog/8_bits_cpu/8_bits_cpu.srcs/sources_1/new/regs.v:63]
+WARNING: [Synth 8-5788] Register reg_out_reg in module regs is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/application/verilog/8_bits_cpu/8_bits_cpu.srcs/sources_1/new/regs.v:65]
+INFO: [Synth 8-256] done synthesizing module 'regs' (7#1) [C:/application/verilog/8_bits_cpu/8_bits_cpu.srcs/sources_1/new/regs.v:23]
+INFO: [Synth 8-638] synthesizing module 'alu' [C:/application/verilog/8_bits_cpu/8_bits_cpu.srcs/sources_1/new/alu.v:23]
+	Parameter ADDI bound to: 2'b00 
+	Parameter ADD bound to: 2'b01 
+	Parameter LS bound to: 2'b10 
+	Parameter RS bound to: 2'b11 
+INFO: [Synth 8-226] default block is never used [C:/application/verilog/8_bits_cpu/8_bits_cpu.srcs/sources_1/new/alu.v:47]
+INFO: [Synth 8-256] done synthesizing module 'alu' (8#1) [C:/application/verilog/8_bits_cpu/8_bits_cpu.srcs/sources_1/new/alu.v:23]
+INFO: [Synth 8-256] done synthesizing module 'cpu' (9#1) [C:/application/verilog/8_bits_cpu/8_bits_cpu.srcs/sources_1/new/cpu.v:23]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 454.707 ; gain = 155.156
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 454.707 ; gain = 155.156
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7vx485tffg1157-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 454.707 ; gain = 155.156
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7vx485tffg1157-1
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "rom" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "rom" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "regs_reg[15]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "regs_reg[14]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "regs_reg[13]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "regs_reg[12]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "regs_reg[11]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "regs_reg[10]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "regs_reg[9]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "regs_reg[8]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "regs_reg[7]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "regs_reg[6]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "regs_reg[5]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "regs_reg[4]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "regs_reg[3]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "regs_reg[2]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "regs_reg[1]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "regs_reg[0]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 454.707 ; gain = 155.156
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 3     
++---Registers : 
+	                8 Bit    Registers := 22    
+	                5 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 8     
++---RAMs : 
+	               2K Bit         RAMs := 1     
++---Muxes : 
+	  25 Input      8 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 5     
+	   4 Input      8 Bit        Muxes := 3     
+	   2 Input      5 Bit        Muxes := 1     
+	  11 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 25    
+	   4 Input      1 Bit        Muxes := 17    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module controller 
+Detailed RTL Component Info : 
++---Registers : 
+	                5 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 8     
++---Muxes : 
+	   2 Input      5 Bit        Muxes := 1     
+	  11 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 8     
+Module rom 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 2     
++---Muxes : 
+	  25 Input      8 Bit        Muxes := 2     
+Module ram 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
++---RAMs : 
+	               2K Bit         RAMs := 1     
+Module program_counter 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 1     
+Module accumulator 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 1     
+Module regs 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 17    
++---Muxes : 
+	   4 Input      8 Bit        Muxes := 2     
+	   4 Input      1 Bit        Muxes := 16    
+	   2 Input      1 Bit        Muxes := 16    
+Module alu 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 2     
++---Muxes : 
+	   4 Input      8 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 2800 (col length:140)
+BRAMs: 2060 (col length: RAMB18 140 RAMB36 70)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3886] merging instance 'alu_out_reg__1i_29' (FD_1) to 'alu_out_reg__1i_28'
+INFO: [Synth 8-3886] merging instance 'alu/alu_out_retimed_reg[0]' (FD_1) to 'alu/alu_out_retimed_reg[7]'
+INFO: [Synth 8-3886] merging instance 'alu_out_reg__1i_28' (FD_1) to 'alu_out_reg__1i_27'
+INFO: [Synth 8-3886] merging instance 'alu/alu_out_retimed_reg[1]' (FD_1) to 'alu/alu_out_retimed_reg[7]'
+INFO: [Synth 8-3886] merging instance 'alu_out_reg__1i_27' (FD_1) to 'alu_out_reg__1i_26'
+INFO: [Synth 8-3886] merging instance 'alu/alu_out_retimed_reg[2]' (FD_1) to 'alu/alu_out_retimed_reg[7]'
+INFO: [Synth 8-3886] merging instance 'alu_out_reg__1i_26' (FD_1) to 'alu_out_reg__1i_25'
+INFO: [Synth 8-3886] merging instance 'alu/alu_out_retimed_reg[3]' (FD_1) to 'alu/alu_out_retimed_reg[7]'
+INFO: [Synth 8-3886] merging instance 'alu_out_reg__1i_25' (FD_1) to 'alu_out_reg__1i_24'
+INFO: [Synth 8-3886] merging instance 'alu/alu_out_retimed_reg[4]' (FD_1) to 'alu/alu_out_retimed_reg[7]'
+INFO: [Synth 8-3886] merging instance 'alu_out_reg__1i_24' (FD_1) to 'alu_out_reg__1i_23'
+INFO: [Synth 8-3886] merging instance 'alu/alu_out_retimed_reg[5]' (FD_1) to 'alu/alu_out_retimed_reg[7]'
+INFO: [Synth 8-3886] merging instance 'alu_out_reg__1i_23' (FD_1) to 'alu_out_reg__1i_22'
+INFO: [Synth 8-3886] merging instance 'alu/alu_out_retimed_reg[6]' (FD_1) to 'alu/alu_out_retimed_reg[7]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (alu_out_reg__1i_22)
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\alu/alu_out_retimed_reg[7] )
+INFO: [Synth 8-3886] merging instance 'rom/rom_out_reg[3]' (FD) to 'rom/instruct_reg[3]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\rom/instruct_reg[3] )
+INFO: [Synth 8-3886] merging instance 'regs/regs_reg[15][0]' (FDCE) to 'regs/regs_reg[14][0]'
+INFO: [Synth 8-3886] merging instance 'regs/regs_reg[14][0]' (FDCE) to 'regs/regs_reg[13][0]'
+INFO: [Synth 8-3886] merging instance 'regs/regs_reg[13][0]' (FDCE) to 'regs/regs_reg[12][0]'
+INFO: [Synth 8-3886] merging instance 'regs/regs_reg[12][0]' (FDCE) to 'regs/regs_reg[11][0]'
+INFO: [Synth 8-3886] merging instance 'regs/regs_reg[11][0]' (FDCE) to 'regs/regs_reg[10][0]'
+INFO: [Synth 8-3886] merging instance 'regs/regs_reg[10][0]' (FDCE) to 'regs/regs_reg[9][0]'
+INFO: [Synth 8-3886] merging instance 'regs/regs_reg[9][0]' (FDCE) to 'regs/regs_reg[8][0]'
+INFO: [Synth 8-3886] merging instance 'regs/regs_reg[8][0]' (FDCE) to 'regs/regs_reg[7][0]'
+INFO: [Synth 8-3886] merging instance 'regs/regs_reg[7][0]' (FDCE) to 'regs/regs_reg[6][0]'
+INFO: [Synth 8-3886] merging instance 'regs/regs_reg[6][0]' (FDCE) to 'regs/regs_reg[5][0]'
+INFO: [Synth 8-3886] merging instance 'regs/regs_reg[5][0]' (FDCE) to 'regs/regs_reg[4][0]'
+INFO: [Synth 8-3886] merging instance 'regs/regs_reg[4][0]' (FDCE) to 'regs/regs_reg[3][0]'
+INFO: [Synth 8-3886] merging instance 'regs/regs_reg[3][0]' (FDCE) to 'regs/regs_reg[2][0]'
+INFO: [Synth 8-3886] merging instance 'regs/regs_reg[2][0]' (FDCE) to 'regs/regs_reg[1][0]'
+INFO: [Synth 8-3886] merging instance 'regs/regs_reg[1][0]' (FDCE) to 'regs/regs_reg[0][0]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\regs/regs_reg[0][0] )
+INFO: [Synth 8-3886] merging instance 'regs/regs_reg[15][1]' (FDCE) to 'regs/regs_reg[14][1]'
+INFO: [Synth 8-3886] merging instance 'regs/regs_reg[14][1]' (FDCE) to 'regs/regs_reg[13][1]'
+INFO: [Synth 8-3886] merging instance 'regs/regs_reg[13][1]' (FDCE) to 'regs/regs_reg[12][1]'
+INFO: [Synth 8-3886] merging instance 'regs/regs_reg[12][1]' (FDCE) to 'regs/regs_reg[11][1]'
+INFO: [Synth 8-3886] merging instance 'regs/regs_reg[11][1]' (FDCE) to 'regs/regs_reg[10][1]'
+INFO: [Synth 8-3886] merging instance 'regs/regs_reg[10][1]' (FDCE) to 'regs/regs_reg[9][1]'
+INFO: [Synth 8-3886] merging instance 'regs/regs_reg[9][1]' (FDCE) to 'regs/regs_reg[8][1]'
+INFO: [Synth 8-3886] merging instance 'regs/regs_reg[8][1]' (FDCE) to 'regs/regs_reg[7][1]'
+INFO: [Synth 8-3886] merging instance 'regs/regs_reg[7][1]' (FDCE) to 'regs/regs_reg[6][1]'
+INFO: [Synth 8-3886] merging instance 'regs/regs_reg[6][1]' (FDCE) to 'regs/regs_reg[5][1]'
+INFO: [Synth 8-3886] merging instance 'regs/regs_reg[5][1]' (FDCE) to 'regs/regs_reg[4][1]'
+INFO: [Synth 8-3886] merging instance 'regs/regs_reg[4][1]' (FDCE) to 'regs/regs_reg[3][1]'
+INFO: [Synth 8-3886] merging instance 'regs/regs_reg[3][1]' (FDCE) to 'regs/regs_reg[2][1]'
+INFO: [Synth 8-3886] merging instance 'regs/regs_reg[2][1]' (FDCE) to 'regs/regs_reg[1][1]'
+INFO: [Synth 8-3886] merging instance 'regs/regs_reg[1][1]' (FDCE) to 'regs/regs_reg[0][1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\regs/regs_reg[0][1] )
+INFO: [Synth 8-3886] merging instance 'regs/regs_reg[15][2]' (FDCE) to 'regs/regs_reg[14][2]'
+INFO: [Synth 8-3886] merging instance 'regs/regs_reg[14][2]' (FDCE) to 'regs/regs_reg[13][2]'
+INFO: [Synth 8-3886] merging instance 'regs/regs_reg[13][2]' (FDCE) to 'regs/regs_reg[12][2]'
+INFO: [Synth 8-3886] merging instance 'regs/regs_reg[12][2]' (FDCE) to 'regs/regs_reg[11][2]'
+INFO: [Synth 8-3886] merging instance 'regs/regs_reg[11][2]' (FDCE) to 'regs/regs_reg[10][2]'
+INFO: [Synth 8-3886] merging instance 'regs/regs_reg[10][2]' (FDCE) to 'regs/regs_reg[9][2]'
+INFO: [Synth 8-3886] merging instance 'regs/regs_reg[9][2]' (FDCE) to 'regs/regs_reg[8][2]'
+INFO: [Synth 8-3886] merging instance 'regs/regs_reg[8][2]' (FDCE) to 'regs/regs_reg[7][2]'
+INFO: [Synth 8-3886] merging instance 'regs/regs_reg[7][2]' (FDCE) to 'regs/regs_reg[6][2]'
+INFO: [Synth 8-3886] merging instance 'regs/regs_reg[6][2]' (FDCE) to 'regs/regs_reg[5][2]'
+INFO: [Synth 8-3886] merging instance 'regs/regs_reg[5][2]' (FDCE) to 'regs/regs_reg[4][2]'
+INFO: [Synth 8-3886] merging instance 'regs/regs_reg[4][2]' (FDCE) to 'regs/regs_reg[3][2]'
+INFO: [Synth 8-3886] merging instance 'regs/regs_reg[3][2]' (FDCE) to 'regs/regs_reg[2][2]'
+INFO: [Synth 8-3886] merging instance 'regs/regs_reg[2][2]' (FDCE) to 'regs/regs_reg[1][2]'
+INFO: [Synth 8-3886] merging instance 'regs/regs_reg[1][2]' (FDCE) to 'regs/regs_reg[0][2]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\regs/regs_reg[0][2] )
+INFO: [Synth 8-3886] merging instance 'regs/regs_reg[15][3]' (FDCE) to 'regs/regs_reg[1][3]'
+INFO: [Synth 8-3886] merging instance 'regs/regs_reg[14][3]' (FDCE) to 'regs/regs_reg[1][3]'
+INFO: [Synth 8-3886] merging instance 'regs/regs_reg[13][3]' (FDCE) to 'regs/regs_reg[1][3]'
+INFO: [Synth 8-3886] merging instance 'regs/regs_reg[12][3]' (FDCE) to 'regs/regs_reg[1][3]'
+INFO: [Synth 8-3886] merging instance 'regs/regs_reg[11][3]' (FDCE) to 'regs/regs_reg[1][3]'
+INFO: [Synth 8-3886] merging instance 'regs/regs_reg[10][3]' (FDCE) to 'regs/regs_reg[1][3]'
+INFO: [Synth 8-3886] merging instance 'regs/regs_reg[9][3]' (FDCE) to 'regs/regs_reg[1][3]'
+INFO: [Synth 8-3886] merging instance 'regs/regs_reg[8][3]' (FDCE) to 'regs/regs_reg[1][3]'
+INFO: [Synth 8-3886] merging instance 'regs/regs_reg[7][3]' (FDCE) to 'regs/regs_reg[1][3]'
+INFO: [Synth 8-3886] merging instance 'regs/regs_reg[6][3]' (FDCE) to 'regs/regs_reg[1][3]'
+INFO: [Synth 8-3886] merging instance 'regs/regs_reg[5][3]' (FDCE) to 'regs/regs_reg[1][3]'
+INFO: [Synth 8-3886] merging instance 'regs/regs_reg[4][3]' (FDCE) to 'regs/regs_reg[1][3]'
+INFO: [Synth 8-3886] merging instance 'regs/regs_reg[3][3]' (FDCE) to 'regs/regs_reg[1][3]'
+INFO: [Synth 8-3886] merging instance 'regs/regs_reg[2][3]' (FDCE) to 'regs/regs_reg[1][3]'
+INFO: [Synth 8-3886] merging instance 'regs/regs_reg[1][3]' (FDCE) to 'regs/regs_reg[0][3]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\regs/regs_reg[0][3] )
+INFO: [Synth 8-3886] merging instance 'regs/regs_reg[15][4]' (FDCE) to 'regs/regs_reg[14][4]'
+INFO: [Synth 8-3886] merging instance 'regs/regs_reg[14][4]' (FDCE) to 'regs/regs_reg[13][4]'
+INFO: [Synth 8-3886] merging instance 'regs/regs_reg[13][4]' (FDCE) to 'regs/regs_reg[12][4]'
+INFO: [Synth 8-3886] merging instance 'regs/regs_reg[12][4]' (FDCE) to 'regs/regs_reg[11][4]'
+INFO: [Synth 8-3886] merging instance 'regs/regs_reg[11][4]' (FDCE) to 'regs/regs_reg[10][4]'
+INFO: [Synth 8-3886] merging instance 'regs/regs_reg[10][4]' (FDCE) to 'regs/regs_reg[9][4]'
+INFO: [Synth 8-3886] merging instance 'regs/regs_reg[9][4]' (FDCE) to 'regs/regs_reg[8][4]'
+INFO: [Synth 8-3886] merging instance 'regs/regs_reg[8][4]' (FDCE) to 'regs/regs_reg[7][4]'
+INFO: [Synth 8-3886] merging instance 'regs/regs_reg[7][4]' (FDCE) to 'regs/regs_reg[6][4]'
+INFO: [Synth 8-3886] merging instance 'regs/regs_reg[6][4]' (FDCE) to 'regs/regs_reg[5][4]'
+INFO: [Synth 8-3886] merging instance 'regs/regs_reg[5][4]' (FDCE) to 'regs/regs_reg[4][4]'
+INFO: [Synth 8-3886] merging instance 'regs/regs_reg[4][4]' (FDCE) to 'regs/regs_reg[3][4]'
+INFO: [Synth 8-3886] merging instance 'regs/regs_reg[3][4]' (FDCE) to 'regs/regs_reg[2][4]'
+INFO: [Synth 8-3886] merging instance 'regs/regs_reg[2][4]' (FDCE) to 'regs/regs_reg[1][4]'
+INFO: [Synth 8-3886] merging instance 'regs/regs_reg[1][4]' (FDCE) to 'regs/regs_reg[0][4]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\regs/regs_reg[0][4] )
+INFO: [Synth 8-3886] merging instance 'regs/regs_reg[15][5]' (FDCE) to 'regs/regs_reg[14][5]'
+INFO: [Synth 8-3886] merging instance 'regs/regs_reg[14][5]' (FDCE) to 'regs/regs_reg[13][5]'
+INFO: [Synth 8-3886] merging instance 'regs/regs_reg[13][5]' (FDCE) to 'regs/regs_reg[12][5]'
+INFO: [Synth 8-3886] merging instance 'regs/regs_reg[12][5]' (FDCE) to 'regs/regs_reg[11][5]'
+INFO: [Synth 8-3886] merging instance 'regs/regs_reg[11][5]' (FDCE) to 'regs/regs_reg[10][5]'
+INFO: [Synth 8-3886] merging instance 'regs/regs_reg[10][5]' (FDCE) to 'regs/regs_reg[9][5]'
+INFO: [Synth 8-3886] merging instance 'regs/regs_reg[9][5]' (FDCE) to 'regs/regs_reg[8][5]'
+INFO: [Synth 8-3886] merging instance 'regs/regs_reg[8][5]' (FDCE) to 'regs/regs_reg[7][5]'
+INFO: [Synth 8-3886] merging instance 'regs/regs_reg[7][5]' (FDCE) to 'regs/regs_reg[6][5]'
+INFO: [Synth 8-3886] merging instance 'regs/regs_reg[6][5]' (FDCE) to 'regs/regs_reg[5][5]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\regs/regs_reg[0][5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\regs/regs_reg[0][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\regs/regs_reg[0][7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\instruction_register/reg_addr_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\regs/reg_out_reg[7] )
+WARNING: [Synth 8-3332] Sequential element (controller/pc_en_reg) is unused and will be removed from module cpu.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'controller/pc_en_reg/Q' [C:/application/verilog/8_bits_cpu/8_bits_cpu.srcs/sources_1/new/controller.v:89]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/application/verilog/8_bits_cpu/8_bits_cpu.srcs/sources_1/new/controller.v:89]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/application/verilog/8_bits_cpu/8_bits_cpu.srcs/sources_1/new/controller.v:89]
+WARNING: [Synth 8-3332] Sequential element (controller/jump_en_reg) is unused and will be removed from module cpu.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'controller/jump_en_reg/Q' [C:/application/verilog/8_bits_cpu/8_bits_cpu.srcs/sources_1/new/controller.v:97]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/application/verilog/8_bits_cpu/8_bits_cpu.srcs/sources_1/new/controller.v:97]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/application/verilog/8_bits_cpu/8_bits_cpu.srcs/sources_1/new/controller.v:97]
+WARNING: [Synth 8-3332] Sequential element (controller/ir_en_reg) is unused and will be removed from module cpu.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'controller/ir_en_reg/Q' [C:/application/verilog/8_bits_cpu/8_bits_cpu.srcs/sources_1/new/controller.v:90]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/application/verilog/8_bits_cpu/8_bits_cpu.srcs/sources_1/new/controller.v:90]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/application/verilog/8_bits_cpu/8_bits_cpu.srcs/sources_1/new/controller.v:90]
+WARNING: [Synth 8-3332] Sequential element (controller/rom_en_reg) is unused and will be removed from module cpu.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'controller/rom_en_reg/Q' [C:/application/verilog/8_bits_cpu/8_bits_cpu.srcs/sources_1/new/controller.v:91]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/application/verilog/8_bits_cpu/8_bits_cpu.srcs/sources_1/new/controller.v:91]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/application/verilog/8_bits_cpu/8_bits_cpu.srcs/sources_1/new/controller.v:91]
+WARNING: [Synth 8-3332] Sequential element (controller/ram_en_reg) is unused and will be removed from module cpu.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'controller/ram_en_reg/Q' [C:/application/verilog/8_bits_cpu/8_bits_cpu.srcs/sources_1/new/controller.v:92]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/application/verilog/8_bits_cpu/8_bits_cpu.srcs/sources_1/new/controller.v:92]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/application/verilog/8_bits_cpu/8_bits_cpu.srcs/sources_1/new/controller.v:92]
+WARNING: [Synth 8-3332] Sequential element (controller/reg_en_reg) is unused and will be removed from module cpu.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'controller/reg_en_reg/Q' [C:/application/verilog/8_bits_cpu/8_bits_cpu.srcs/sources_1/new/controller.v:94]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/application/verilog/8_bits_cpu/8_bits_cpu.srcs/sources_1/new/controller.v:94]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/application/verilog/8_bits_cpu/8_bits_cpu.srcs/sources_1/new/controller.v:94]
+WARNING: [Synth 8-3332] Sequential element (controller/reg_source_reg[1]) is unused and will be removed from module cpu.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'controller/reg_source_reg[1]/Q' [C:/application/verilog/8_bits_cpu/8_bits_cpu.srcs/sources_1/new/controller.v:95]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/application/verilog/8_bits_cpu/8_bits_cpu.srcs/sources_1/new/controller.v:95]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/application/verilog/8_bits_cpu/8_bits_cpu.srcs/sources_1/new/controller.v:95]
+WARNING: [Synth 8-3332] Sequential element (controller/reg_source_reg[0]) is unused and will be removed from module cpu.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'controller/reg_source_reg[0]/Q' [C:/application/verilog/8_bits_cpu/8_bits_cpu.srcs/sources_1/new/controller.v:95]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/application/verilog/8_bits_cpu/8_bits_cpu.srcs/sources_1/new/controller.v:95]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/application/verilog/8_bits_cpu/8_bits_cpu.srcs/sources_1/new/controller.v:95]
+WARNING: [Synth 8-3332] Sequential element (controller/ac_en_reg) is unused and will be removed from module cpu.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'controller/ac_en_reg/Q' [C:/application/verilog/8_bits_cpu/8_bits_cpu.srcs/sources_1/new/controller.v:96]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/application/verilog/8_bits_cpu/8_bits_cpu.srcs/sources_1/new/controller.v:96]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/application/verilog/8_bits_cpu/8_bits_cpu.srcs/sources_1/new/controller.v:96]
+WARNING: [Synth 8-3332] Sequential element (controller/alu_en_reg) is unused and will be removed from module cpu.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'controller/alu_en_reg/Q' [C:/application/verilog/8_bits_cpu/8_bits_cpu.srcs/sources_1/new/controller.v:97]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/application/verilog/8_bits_cpu/8_bits_cpu.srcs/sources_1/new/controller.v:97]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/application/verilog/8_bits_cpu/8_bits_cpu.srcs/sources_1/new/controller.v:97]
+WARNING: [Synth 8-3332] Sequential element (instruction_register/reg_addr_reg[3]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (alu/alu_out_retimed_reg[7]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (alu_out_reg__1i_22) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (program_counter/pc_addr_reg[3]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (accumulator/ac_out_reg[7]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (accumulator/ac_out_reg[6]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (accumulator/ac_out_reg[5]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (accumulator/ac_out_reg[4]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (accumulator/ac_out_reg[3]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (accumulator/ac_out_reg[2]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (accumulator/ac_out_reg[1]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (accumulator/ac_out_reg[0]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (regs/reg_out_reg[7]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (rom/instruct_reg[3]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (regs/regs_reg[0][0]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (regs/regs_reg[0][1]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (regs/regs_reg[0][2]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (regs/regs_reg[0][3]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (regs/regs_reg[0][4]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (regs/regs_reg[0][5]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (regs/regs_reg[0][6]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (regs/regs_reg[0][7]) is unused and will be removed from module cpu.
+Removed BRAM instance from module cpu due to constant propagation
+Removed 1 RAM instances from module cpu due to constant propagation
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\rom/instruct_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\rom/instruct_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\rom/instruct_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\rom/instruct_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\rom/instruct_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\rom/instruct_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\rom/instruct_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\rom/rom_out_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\rom/rom_out_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\rom/rom_out_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\rom/rom_out_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\rom/rom_out_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\rom/rom_out_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\rom/rom_out_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\instruction_register/reg_addr_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\instruction_register/reg_addr_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\instruction_register/reg_addr_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\instruction_register/ins_code_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\instruction_register/ins_code_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\instruction_register/ins_code_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\instruction_register/ins_code_reg[3] )
+WARNING: [Synth 8-3332] Sequential element (instruction_register/ins_code_reg[3]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (instruction_register/ins_code_reg[2]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (instruction_register/ins_code_reg[1]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (instruction_register/ins_code_reg[0]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (instruction_register/reg_addr_reg[2]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (instruction_register/reg_addr_reg[1]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (instruction_register/reg_addr_reg[0]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (rom/rom_out_reg[7]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (rom/rom_out_reg[6]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (rom/rom_out_reg[5]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (rom/rom_out_reg[4]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (rom/rom_out_reg[2]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (rom/rom_out_reg[1]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (rom/rom_out_reg[0]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (rom/instruct_reg[7]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (rom/instruct_reg[6]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (rom/instruct_reg[5]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (rom/instruct_reg[4]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (rom/instruct_reg[2]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (rom/instruct_reg[1]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (rom/instruct_reg[0]) is unused and will be removed from module cpu.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 758.188 ; gain = 458.637
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 758.188 ; gain = 458.637
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3332] Sequential element (controller/state_reg[4]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (controller/state_reg[3]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (controller/state_reg[2]) is unused and will be removed from module cpu.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 767.238 ; gain = 467.688
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 767.238 ; gain = 467.688
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 767.238 ; gain = 467.688
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 767.238 ; gain = 467.688
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 767.238 ; gain = 467.688
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 767.238 ; gain = 467.688
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 767.238 ; gain = 467.688
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+------+------+
+|      |Cell  |Count |
++------+------+------+
+|1     |BUFG  |     1|
+|2     |LUT1  |     2|
+|3     |LUT2  |     1|
+|4     |FDPE  |     1|
+|5     |FDRE  |    10|
+|6     |IBUF  |     2|
+|7     |OBUF  |   101|
+|8     |OBUFT |     1|
++------+------+------+
+
+Report Instance Areas: 
++------+-------------+-----------+------+
+|      |Instance     |Module     |Cells |
++------+-------------+-----------+------+
+|1     |top          |           |   119|
+|2     |  alu        |alu        |     8|
+|3     |  controller |controller |     5|
++------+-------------+-----------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 767.238 ; gain = 467.688
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 30 critical warnings and 58 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 767.238 ; gain = 467.688
+Synthesis Optimization Complete : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 767.238 ; gain = 467.688
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+190 Infos, 58 Warnings, 30 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 874.668 ; gain = 587.543
+INFO: [Common 17-1381] The checkpoint 'C:/application/verilog/8_bits_cpu/8_bits_cpu.runs/synth_1/cpu.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file cpu_utilization_synth.rpt -pb cpu_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.183 . Memory (MB): peak = 874.668 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Fri May 17 23:13:26 2024...
