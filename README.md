@@ -17,7 +17,7 @@
 |:-    |:-       |:-      |:-                    |
 |      |4'bXXXX  |4'bXXXX |8'bXXXX_XXXXX         |
 ## (二)指令集内容
-![image](image/pic2.png)
+<!--[image](image/pic2.png)-->
 |指令 / instruct         |助记符 / mnemonic |reg_addr     |rom/ram_addr/immediate|解释 / explain|
 |:-                      |:-:              |:-:          |:-:                   |:-            |
 |NOP                     |4'b0000          |4'b0000      |                      |空指令|

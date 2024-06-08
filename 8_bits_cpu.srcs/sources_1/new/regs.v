@@ -60,7 +60,12 @@ module regs(
             regs[14] <= 8'b0000_0000;
             regs[15] <= 8'b0000_0000;
         end else if (reg_en) begin
-            case (reg_source)
+            // 如果目标寄存器为R15/PC，则不进行修改操作
+            // If the target register is R15/PC, no modification operation will be performed
+            if (reg_addr == 4'b1111) begin
+                reg_out <= regs[reg_addr];
+            end else begin
+                case (reg_source)
                 REG_OUT: begin
                     reg_out <= regs[reg_addr]; 
                 end
@@ -80,6 +85,7 @@ module regs(
                     reg_out <= 8'bZZZZ_ZZZZ;
                 end 
             endcase
+            end
         end
     end
 
