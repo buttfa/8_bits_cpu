@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Mon Jun  3 12:58:54 2024
+# Process ID: 16752
+# Current directory: C:/application/8_bits/8_bits_cpu
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent13992 C:\application\8_bits\8_bits_cpu\8_bits_cpu.xpr
+# Log file: C:/application/8_bits/8_bits_cpu/vivado.log
+# Journal file: C:/application/8_bits/8_bits_cpu\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/application/8_bits/8_bits_cpu/8_bits_cpu.xpr
+update_compile_order -fileset sources_1
