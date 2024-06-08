@@ -66,25 +66,25 @@ module regs(
                 reg_out <= regs[reg_addr];
             end else begin
                 case (reg_source)
-                REG_OUT: begin
-                    reg_out <= regs[reg_addr]; 
-                end
-                ROM: begin
-                    regs[reg_addr] <= rom_out;
-                    reg_out <= rom_out;
-                end
-                RAM: begin
-                    regs[reg_addr] <= ram_out;
-                    reg_out <= ram_out;
-                end
-                AC : begin
-                    regs[reg_addr] <= ac_out;
-                    reg_out <= ac_out;
-                end
-                default: begin
-                    reg_out <= 8'bZZZZ_ZZZZ;
-                end 
-            endcase
+                    REG_OUT: begin
+                        reg_out <= regs[reg_addr]; 
+                    end
+                    ROM: begin
+                        regs[reg_addr] <= rom_out;
+                        reg_out <= rom_out;
+                    end
+                    RAM: begin
+                        regs[reg_addr] <= ram_out;
+                        reg_out <= ram_out;
+                    end
+                    AC : begin
+                        regs[reg_addr] <= ac_out;
+                        reg_out <= ac_out;
+                    end
+                    default: begin
+                        reg_out <= 8'bZZZZ_ZZZZ;
+                    end 
+                endcase
             end
         end
     end
