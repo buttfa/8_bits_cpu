@@ -20,19 +20,25 @@
 ![image](image/pic2.png)
 |指令 / instruct         |助记符 / mnemonic |reg_addr     |rom/ram_addr/immediate|解释 / explain|
 |:-                      |:-:              |:-:          |:-:                   |:-            |
-|NOP                     |4'b0000 |4'b0000 |             |空指令|
-|HALT                    |4'b1000 |4'bXXXX |             |停止运行|
-|B immediate             |4'b0001 |4'bXXXX |8'bXXXX_XXXX |无条件跳转至立即数所指向的地址|
-|BEQ immediate           |4'b0010 |4'bXXXX |8'bXXXX_XXXX |当ac_out==reg_out时跳转至立即数所指向的地址|
-|BLT immediate           |4'b0011 |4'bXXXX |8'bXXXX_XXXX |当ac_out<reg_out时时跳转至立即数所指向的地址|
-|LDO rom[addr]           |4'b0101 |4'bXXXX |8'bXXXX_XXXX |将rom[addr]的值写入AC|
-|LDA ram[addr]           |4'b0110 |4'bXXXX |8'bXXXX_XXXX |将ram[addr]的值写入AC|
-|STO reg[addr], ram[addr]|4'b0111 |4'bXXXX |8'bXXXX_XXXX |将reg[addr]的值写入ram[addr]|
-|PRE reg[addr]           |4'b1001 |4'bXXXX |             |将AC的值写入reg[addr]|
+|NOP                     |4'b0000          |4'b0000      |                      |空指令|
+|HALT                    |4'b1000          |4'bXXXX      |                      |停止运行|
+|B immediate             |4'b0001          |4'bXXXX      |8'bXXXX_XXXX          |无条件跳转至立即数所指向的地址|
+|BEQ immediate           |4'b0010          |4'bXXXX      |8'bXXXX_XXXX          |当ac_out==reg_out时跳转至立即数所指向的地址|
+|BLT immediate           |4'b0011          |4'bXXXX      |8'bXXXX_XXXX          |当ac_out<reg_out时时跳转至立即数所指向的地址|
+|LDO rom[addr]           |4'b0101          |4'bXXXX      |8'bXXXX_XXXX          |将rom[addr]的值写入AC|
+|LDA ram[addr]           |4'b0110          |4'bXXXX      |8'bXXXX_XXXX          |将ram[addr]的值写入AC|
+|STO reg[addr], ram[addr]|4'b0111          |4'bXXXX      |8'bXXXX_XXXX          |将reg[addr]的值写入ram[addr]|
+|PRE reg[addr]           |4'b1001          |4'bXXXX      |                      |将AC的值写入reg[addr]|
+|LDM reg[addr]           |4'b1010          |4'bXXXX      |                      |将reg[addr]的值写入AC|
+|ADDI immediate          |4'b1100          |4'bXXXX      |8'bXXXX_XXXX          |AC = AC + immediate|
+|CPL                     |4'b1100          |4'bXXXX      |8'b0000_0000          |AC = ~AC|
+|ADD reg[addr]           |4'b1101          |4'bXXXX      |                      |AC = AC + AC[addr]|
+|LS reg[addr]            |4'b1110          |4'bXXXX      |                      |AC = AC << reg[addr]|
+|RS reg[addr]            |4'b1111          |4'bXXXX      |                      |AC = AC >> reg[addr]|
 
 # 寄存器组
 |名称      |功能      |注意事项    |
-|:-:       |:-:       |:-:         |
+|:-:       |:-:       |:-         |
 |R00/R0    |通用寄存器 |无 / Empty |
 |R01/R1    |通用寄存器 |无 / Empty |
 |R02/R2    |通用寄存器 |无 / Empty |
