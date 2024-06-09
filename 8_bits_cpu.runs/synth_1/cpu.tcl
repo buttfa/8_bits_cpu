@@ -21,22 +21,22 @@ create_project -in_memory -part xc7vx485tffg1157-1
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir C:/application/verilog/8_bits_cpu/8_bits_cpu.cache/wt [current_project]
-set_property parent.project_path C:/application/verilog/8_bits_cpu/8_bits_cpu.xpr [current_project]
+set_property webtalk.parent_dir C:/application/8_bits/8_bits_cpu/8_bits_cpu.cache/wt [current_project]
+set_property parent.project_path C:/application/8_bits/8_bits_cpu/8_bits_cpu.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_output_repo c:/application/verilog/8_bits_cpu/8_bits_cpu.cache/ip [current_project]
+set_property ip_output_repo c:/application/8_bits/8_bits_cpu/8_bits_cpu.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_verilog -library xil_defaultlib {
-  C:/application/verilog/8_bits_cpu/8_bits_cpu.srcs/sources_1/new/accumulator.v
-  C:/application/verilog/8_bits_cpu/8_bits_cpu.srcs/sources_1/new/alu.v
-  C:/application/verilog/8_bits_cpu/8_bits_cpu.srcs/sources_1/new/controller.v
-  C:/application/verilog/8_bits_cpu/8_bits_cpu.srcs/sources_1/new/instruction_register.v
-  C:/application/verilog/8_bits_cpu/8_bits_cpu.srcs/sources_1/new/program_counter.v
-  C:/application/verilog/8_bits_cpu/8_bits_cpu.srcs/sources_1/new/ram.v
-  C:/application/verilog/8_bits_cpu/8_bits_cpu.srcs/sources_1/new/regs.v
-  C:/application/verilog/8_bits_cpu/8_bits_cpu.srcs/sources_1/new/rom.v
-  C:/application/verilog/8_bits_cpu/8_bits_cpu.srcs/sources_1/new/cpu.v
+  C:/application/8_bits/8_bits_cpu/8_bits_cpu.srcs/sources_1/new/accumulator.v
+  C:/application/8_bits/8_bits_cpu/8_bits_cpu.srcs/sources_1/new/alu.v
+  C:/application/8_bits/8_bits_cpu/8_bits_cpu.srcs/sources_1/new/controller.v
+  C:/application/8_bits/8_bits_cpu/8_bits_cpu.srcs/sources_1/new/instruction_register.v
+  C:/application/8_bits/8_bits_cpu/8_bits_cpu.srcs/sources_1/new/program_counter.v
+  C:/application/8_bits/8_bits_cpu/8_bits_cpu.srcs/sources_1/new/ram.v
+  C:/application/8_bits/8_bits_cpu/8_bits_cpu.srcs/sources_1/new/regs.v
+  C:/application/8_bits/8_bits_cpu/8_bits_cpu.srcs/sources_1/new/rom.v
+  C:/application/8_bits/8_bits_cpu/8_bits_cpu.srcs/sources_1/new/cpu.v
 }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the

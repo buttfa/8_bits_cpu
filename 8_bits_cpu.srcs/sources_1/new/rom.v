@@ -19,14 +19,14 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-// ROM只读
+// ROM只读 / ROM Read Only
 module rom(
-        input rom_en, // rom使能信号
-        input [7:0] addr, // 读取数据的目标地址
-        input [7:0] pc_addr, // PC指向的指令地址
+        input rom_en, // rom使能信号 / ROM enable signal
+        input [7:0] addr, // 读取数据的目标地址 / Target address for reading data
+        input [7:0] pc_addr, // PC指向的指令地址 / The instruction address pointed to by the PC
 
-        output reg [7:0] rom_out, // 输出的数据
-        output reg [7:0] instruct // 依据pc_addr取出的指令
+        output reg [7:0] rom_out, // 输出的数据 / Output data
+        output reg [7:0] instruct // 依据pc_addr取出的指令 / Instructions retrieved based on pc-addr
     );
 
     // 8x256=2048(bits)=256(bytes)
@@ -74,7 +74,7 @@ module rom(
         // rom[23]  = 8'b0000_0000;
     end 
 
-    // 使能信号的上升沿更新输出数据
+    // 使能信号的上升沿更新输出数据 / Enable the rising edge of the signal to update the output data
     always @(posedge rom_en) begin
         rom_out <= rom[addr];
         instruct <= rom[pc_addr];

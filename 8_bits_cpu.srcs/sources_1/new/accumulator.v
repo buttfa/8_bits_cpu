@@ -21,13 +21,13 @@
 
 
 module accumulator(
-        input rst, // 复位信号
-        input ac_en, // 修改AC的使能信号
-        input ac_source, // AC输入来源选择，0表示数据来自REGS，1表示数据来自ALU
-        input [7:0] reg_out, // 来自REGS的数据
-        input [7:0] alu_out, // 来自ALU的数据
+        input rst, // 复位信号 / Reset signal
+        input ac_en, // AC的使能信号 / Enabling signal of AC
+        input ac_source, // AC输入来源选择，0表示数据来自REGS，1表示数据来自ALU / AC input source selection, 0 represents data from REGS, 1 represents data from ALU
+        input [7:0] reg_out, // 来自REGS的数据 / Data from REGS
+        input [7:0] alu_out, // 来自ALU的数据 / Data from ALU
     
-        output reg [7:0] ac_out // AC输出
+        output reg [7:0] ac_out // AC输出 / AC output
     );
 
 

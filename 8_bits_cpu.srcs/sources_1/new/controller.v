@@ -21,24 +21,24 @@
 
 
 module controller(
-        input clk, // 时钟信号
-        input rst, // 复位信号
-        input [3:0] ins_code, // 指令编码
+        input clk, // 时钟信号 / Clock signal
+        input rst, // 复位信号 / Reset signal
+        input [3:0] ins_code, // 指令编码 / Instruction encoding
         input [3:0] reg_addr,
 
-        output reg [4:0] state, //当前状态
-        output reg [4:0] next_state, // 下一个状态
-        output reg pc_en, // PC使能信号
-        output reg jump_en, // PC跳转使能信号
-        output reg ir_en, // IR使能信号
-        output reg rom_en, // ROM使能信号
-        output reg ram_en, // RAM使能信号
-        output reg w_r, // RAM的读写信号
-        output reg reg_en, // 寄存器使能信号
-        output reg [ 1:0] reg_source, // 写寄存器的数据来源
-        output reg ac_en, // AC使能信号
-        output reg ac_source, // AC的数据来源
-        output reg alu_en // ALU使能信号
+        output reg [4:0] state, // 当前状态 / Current state
+        output reg [4:0] next_state, // 下一个状态 / Next state
+        output reg pc_en, // PC使能信号 / PC enable signal
+        output reg jump_en, // PC跳转使能信号 / PC jump enable signal
+        output reg ir_en, // IR使能信号 / IR enable signal
+        output reg rom_en, // ROM使能信号 / ROM enable signal
+        output reg ram_en, // RAM使能信号 / RAM enable signal
+        output reg w_r, // RAM的读写信号 / Read and write signals of RAM
+        output reg reg_en, // 寄存器使能信号 / Register enable signal
+        output reg [ 1:0] reg_source, // 写寄存器的数据来源 / The data source for writing registers
+        output reg ac_en, // AC使能信号 / AC enable signal
+        output reg ac_source, // AC的数据来源 / The data source of AC
+        output reg alu_en // ALU使能信号 / ALU enable signal
     );
 
     parameter 
@@ -117,7 +117,7 @@ module controller(
         BEQ   = 4'b0010,
         BLT   = 4'b0011;
 
-    // 确定下一个状态
+    // 确定下一个状态 / Determine the next state
     always @(*) begin
         case (state)
             S0: next_state <= S0;
@@ -150,44 +150,44 @@ module controller(
                 default: next_state <= S0;
             endcase 
 
-            // LDO指令
+            // LDO指令 / LDO instruction
             LDO_1: next_state <= LDO_2;
             LDO_2: next_state <= LDO_3;
             LDO_3: next_state <= LDO_4;
             LDO_4: next_state <= S1;
 
-            // LDA指令
+            // LDA指令 / LDA instruction
             LDA_1: next_state <= LDA_2;
             LDA_2: next_state <= LDA_3;
             LDA_3: next_state <= LDA_4;
             LDA_4: next_state <= S1;            
 
-            // STO指令
+            // STO指令 / STO instruction
             STO_1: next_state <= STO_2;
             STO_2: next_state <= STO_3;
             STO_3: next_state <= STO_4;
             STO_4: next_state <= S1;
 
-            // PRE指令
+            // PRE指令 / PRE instruction
             PRE_1: next_state <= PRE_2;
             PRE_2: next_state <= S1;
 
-            // LDM指令
+            // LDM指令 / LDM instruction
             LDM_1: next_state <= S1;
 
-            // OPERAL指令
+            // OPERAL指令 / OPERAL instruction
             OPERAL_1: next_state <= OPERAL_2;
             OPERAL_2: next_state <= OPERAL_3;
             OPERAL_3: next_state <= OPERAL_4;
             OPERAL_4: next_state <= OPERAL_5;
             OPERAL_5: next_state <= S1;
 
-            // OPERAS指令
+            // OPERAS指令 / OPERAS instruction
             OPERAS_1: next_state <= OPERAS_2;
             OPERAS_2: next_state <= OPERAS_3;
             OPERAS_3: next_state <= S1;
 
-            // JUMP指令
+            // JUMP指令 / JUMP instruction
             JUMP_1: next_state <= JUMP_2;
             JUMP_2: next_state <= JUMP_3;
             JUMP_3: next_state <= JUMP_4;

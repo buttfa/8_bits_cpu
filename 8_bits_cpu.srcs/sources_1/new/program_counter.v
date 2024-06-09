@@ -70,7 +70,7 @@ module program_counter(
         end
     end
 
-    // 对从ROM中取出的数据做不同的解释
+    // 对从ROM中取出的数据做不同的解释 / Provide different explanations for data extracted from ROM
     assign command = instruct;
     assign addr = instruct;
 endmodule

@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/application/verilog/8_bits_cpu/8_bits_cpu.runs/impl_1'
+HD_PWD='C:/application/8_bits/8_bits_cpu/8_bits_cpu.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

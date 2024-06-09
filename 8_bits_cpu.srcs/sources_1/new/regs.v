@@ -21,18 +21,18 @@
 
 
 module regs(
-        input rst, // 复位信号
-        input reg_en, // 寄存器使能信号
-        input [3:0] reg_addr, // 目标寄存器地址
-        input [1:0] reg_source, // 指明寄存器操作
-        input [7:0] rom_out, // 来自ROM的数据
-        input [7:0] ram_out, // 来自RAM的数据
-        input [7:0] ac_out, // 来自AC的数据
+        input rst, // 复位信号 / Reset signal
+        input reg_en, // 寄存器使能信号 / Register enable signal
+        input [3:0] reg_addr, // 目标寄存器地址 / Target register address
+        input [1:0] reg_source, // 指明寄存器操作 / Indicate register operation
+        input [7:0] rom_out, // 来自ROM的数据 / Data from ROM
+        input [7:0] ram_out, // 来自RAM的数据 / Data from RAM
+        input [7:0] ac_out, // 来自AC的数据 / Data from AC
 
-        output reg [7:0] reg_out // 寄存器输出的数据
+        output reg [7:0] reg_out // 寄存器输出的数据 / Register output data
     );
 
-    // 16个8位通用寄存器
+    // 16个8位通用寄存器 / 16 8-bit general-purpose registers
     reg [7:0] regs [15:0];
 
     parameter 

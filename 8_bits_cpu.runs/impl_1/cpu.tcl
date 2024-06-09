@@ -68,11 +68,11 @@ set rc [catch {
   create_project -in_memory -part xc7vx485tffg1157-1
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir C:/application/verilog/8_bits_cpu/8_bits_cpu.cache/wt [current_project]
-  set_property parent.project_path C:/application/verilog/8_bits_cpu/8_bits_cpu.xpr [current_project]
-  set_property ip_output_repo C:/application/verilog/8_bits_cpu/8_bits_cpu.cache/ip [current_project]
+  set_property webtalk.parent_dir C:/application/8_bits/8_bits_cpu/8_bits_cpu.cache/wt [current_project]
+  set_property parent.project_path C:/application/8_bits/8_bits_cpu/8_bits_cpu.xpr [current_project]
+  set_property ip_output_repo C:/application/8_bits/8_bits_cpu/8_bits_cpu.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
-  add_files -quiet C:/application/verilog/8_bits_cpu/8_bits_cpu.runs/synth_1/cpu.dcp
+  add_files -quiet C:/application/8_bits/8_bits_cpu/8_bits_cpu.runs/synth_1/cpu.dcp
   link_design -top cpu -part xc7vx485tffg1157-1
   close_msg_db -file init_design.pb
 } RESULT]
