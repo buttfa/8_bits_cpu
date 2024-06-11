@@ -102,6 +102,8 @@ module controller(
 
     parameter 
         NOP   = 4'b0000,
+        HALT  = 4'b1000,
+
         LDO   = 4'b0101,
         LDA   = 4'b0110,
         STO   = 4'b0111,
@@ -125,13 +127,8 @@ module controller(
             S1: next_state <= S2;
             S2: next_state <= S3;
             S3: case (ins_code)
-                NOP: begin
-                    if (reg_addr == 4'b0000) begin
-                        next_state <= S1;
-                    end else begin
-                        next_state <= S0;
-                    end
-                end
+                NOP: next_state <= S1;
+                HALT: next_state <= S0;
                 LDO: next_state <= LDO_1; 
                 LDA: next_state <= LDA_1;
                 STO: next_state <= STO_1;
