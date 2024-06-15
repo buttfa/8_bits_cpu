@@ -141,3 +141,4 @@ source cpu_test.tcl
 close_sim
 launch_simulation
 source cpu_test.tcl
+close_sim

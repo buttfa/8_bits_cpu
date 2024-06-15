@@ -3187,3 +3187,7 @@ source cpu_test.tcl
 # run 1000ns
 INFO: [USF-XSim-96] XSim completed. Design snapshot 'cpu_test_behav' loaded.
 INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Sat Jun 15 15:48:43 2024...
