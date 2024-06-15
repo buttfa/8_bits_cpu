@@ -32,8 +32,8 @@
 |LDO                     |4'b0101          |4'b1001      |                      |将rom[ROC]的值写入AC / Write the value of rom [addr] into AC|
 |LDA                     |4'b0110          |4'b1010      |                      |将ram[RAC]的值写入AC / Write the value of ram [addr] into AC|
 |STO reg[addr]           |4'b0111          |4'b1010      |                      |将AC的值写入ram[RAC] / Write the value of reg [addr] into ram [addr]|
-|PRE reg[addr]           |4'b1001          |4'bXXXX      |                      |将AC的值写入reg[addr] / Write the value of AC into Reg [addr]|
-|LDM reg[addr]           |4'b1010          |4'bXXXX      |                      |将reg[addr]的值写入AC / Write the value of Reg [addr] into AC|
+|PRE reg[addr]           |4'b1001          |4'bXXXX      |                      |将reg[addr]的值写入AC / Write the value of Reg [addr] into AC|
+|LDM reg[addr]           |4'b1010          |4'bXXXX      |                      |将AC的值写入reg[addr] / Write the value of AC into Reg [addr]|
 |ADDI immediate          |4'b1100          |4'bXXXX      |8'bXXXX_XXXX          |AC = AC + immediate|
 |CPL                     |4'b1100          |4'bXXXX      |8'b0000_0000          |AC = ~AC|
 |ADD reg[addr]           |4'b1101          |4'bXXXX      |                      |AC = AC + reg[addr]|
