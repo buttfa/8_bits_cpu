@@ -29,9 +29,9 @@
 |B immediate             |4'b0001          |4'bXXXX      |8'bXXXX_XXXX          |无条件跳转至立即数所指向的地址 / Unconditionally jump to the address pointed to by the immediate value|
 |BEQ immediate           |4'b0010          |4'bXXXX      |8'bXXXX_XXXX          |当ac_out==reg_out时跳转至立即数所指向的地址 / Jump to the address pointed to by the immediate value when ac_out==reg_out|
 |BLT immediate           |4'b0011          |4'bXXXX      |8'bXXXX_XXXX          |当ac_out<reg_out时时跳转至立即数所指向的地址 / Jump to the address pointed to by the immediate value when ac_out<reg_out|
-|LDO                     |4'b0101          |4'bXXXX      |                      |将rom[ROC]的值写入AC / Write the value of rom [addr] into AC|
-|LDA                     |4'b0110          |4'bXXXX      |                      |将ram[RAC]的值写入AC / Write the value of ram [addr] into AC|
-|STO reg[addr]           |4'b0111          |4'bXXXX      |                      |将reg[addr]的值写入ram[RAC] / Write the value of reg [addr] into ram [addr]|
+|LDO                     |4'b0101          |4'b1001      |                      |将rom[ROC]的值写入AC / Write the value of rom [addr] into AC|
+|LDA                     |4'b0110          |4'b1010      |                      |将ram[RAC]的值写入AC / Write the value of ram [addr] into AC|
+|STO reg[addr]           |4'b0111          |4'b1010      |                      |将AC的值写入ram[RAC] / Write the value of reg [addr] into ram [addr]|
 |PRE reg[addr]           |4'b1001          |4'bXXXX      |                      |将AC的值写入reg[addr] / Write the value of AC into Reg [addr]|
 |LDM reg[addr]           |4'b1010          |4'bXXXX      |                      |将reg[addr]的值写入AC / Write the value of Reg [addr] into AC|
 |ADDI immediate          |4'b1100          |4'bXXXX      |8'bXXXX_XXXX          |AC = AC + immediate|

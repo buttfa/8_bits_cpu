@@ -43,9 +43,9 @@ module regs(
 
     always @(negedge rst or posedge reg_en) begin
         if (!rst) begin
-            regs[0]  <= 8'b0000_0000;
-            regs[1]  <= 8'b0000_0000;
-            regs[2]  <= 8'b0000_0000;
+            regs[0]  <= 8'b0000_0001;
+            regs[1]  <= 8'b0000_0010;
+            regs[2]  <= 8'b0000_0100;
             regs[3]  <= 8'b0000_0000;
             regs[4]  <= 8'b0000_0000;
             regs[5]  <= 8'b0000_0000;

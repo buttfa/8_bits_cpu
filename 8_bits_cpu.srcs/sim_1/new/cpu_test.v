@@ -44,7 +44,7 @@ module cpu_test();
     wire [7:0] reg_out;
     wire [1:0] reg_source; // 写寄存器的数据来源
     wire ac_en; // AC使能信号
-    wire ac_source; // AC的数据来源
+    wire [1:0] ac_source; // AC的数据来源
     wire [7:0] ac_out;
     wire alu_en; // ALU使能信号
     wire [7:0] alu_out;

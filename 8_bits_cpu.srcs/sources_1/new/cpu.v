@@ -44,7 +44,7 @@ module cpu(
         output [7:0] reg_out,
         output [1:0] reg_source, // 写寄存器的数据来源
         output ac_en, // AC使能信号
-        output ac_source, // AC的数据来源
+        output [1:0] ac_source, // AC的数据来源
         output [7:0] ac_out,
         output alu_en, // ALU使能信号
         output [7:0] alu_out
@@ -73,7 +73,7 @@ module cpu(
 
     rom rom(
         .rom_en(rom_en),
-        .addr(addr),
+        .addr(reg_out),
         .pc_addr(pc_addr),
 
         .rom_out(rom_out),
@@ -83,8 +83,8 @@ module cpu(
     ram ram(
         .ram_en(ram_en),
         .w_r(w_r),
-        .addr(addr),
-        .ram_in(reg_out),
+        .addr(reg_out),
+        .ram_in(ac_out),
 
         .ram_out(ram_out)
     );
@@ -119,6 +119,8 @@ module cpu(
         .ac_source(ac_source),
         .reg_out(reg_out),
         .alu_out(alu_out),
+        .rom_out(rom_out),
+        .ram_out(ram_out),
 
         .ac_out(ac_out)
     );

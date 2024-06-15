@@ -23,21 +23,25 @@
 module accumulator(
         input rst, // 复位信号 / Reset signal
         input ac_en, // AC的使能信号 / Enabling signal of AC
-        input ac_source, // AC输入来源选择，0表示数据来自REGS，1表示数据来自ALU / AC input source selection, 0 represents data from REGS, 1 represents data from ALU
+        input [1:0] ac_source, // AC输入来源选择，00表示数据来自REGS，01表示数据来自ALU,10表示rom,11表示ram
         input [7:0] reg_out, // 来自REGS的数据 / Data from REGS
         input [7:0] alu_out, // 来自ALU的数据 / Data from ALU
+        input [7:0] rom_out,
+        input [7:0] ram_out,
     
         output reg [7:0] ac_out // AC输出 / AC output
     );
 
 
     parameter 
-        REG = 1'b0,
-        ALU = 1'b1;
+        REG = 2'b00,
+        ALU = 2'b01,
+        ROM = 2'b10,
+        RAM = 2'b11;
 
     always @(negedge rst or posedge ac_en) begin
         if (!rst) begin
-            ac_out <= 8'b0000_0000;
+            ac_out <= 8'b0000_0010;
         end else if (ac_en) begin
             case (ac_source)
                 REG: begin
@@ -45,6 +49,12 @@ module accumulator(
                 end 
                 ALU: begin
                     ac_out <= alu_out;
+                end
+                ROM: begin
+                    ac_out <= rom_out;
+                end
+                RAM: begin
+                    ac_out <= ram_out;
                 end
                 default: begin
                     ac_out <= ac_out;

@@ -35,9 +35,9 @@ module controller(
         output reg ram_en, // RAM使能信号 / RAM enable signal
         output reg w_r, // RAM的读写信号 / Read and write signals of RAM
         output reg reg_en, // 寄存器使能信号 / Register enable signal
-        output reg [ 1:0] reg_source, // 写寄存器的数据来源 / The data source for writing registers
+        output reg [1:0] reg_source, // 写寄存器的数据来源 / The data source for writing registers
         output reg ac_en, // AC使能信号 / AC enable signal
-        output reg ac_source, // AC的数据来源 / The data source of AC
+        output reg [1:0] ac_source, // AC的数据来源 / The data source of AC
         output reg alu_en // ALU使能信号 / ALU enable signal
     );
 
@@ -150,20 +150,20 @@ module controller(
             // LDO指令 / LDO instruction
             LDO_1: next_state <= LDO_2;
             LDO_2: next_state <= LDO_3;
-            LDO_3: next_state <= LDO_4;
-            LDO_4: next_state <= S1;
+            LDO_3: next_state <= S1;
+            // LDO_4: next_state <= S1;
 
             // LDA指令 / LDA instruction
             LDA_1: next_state <= LDA_2;
             LDA_2: next_state <= LDA_3;
-            LDA_3: next_state <= LDA_4;
-            LDA_4: next_state <= S1;            
+            LDA_3: next_state <= S1;
+            // LDA_4: next_state <= S1;            
 
             // STO指令 / STO instruction
             STO_1: next_state <= STO_2;
-            STO_2: next_state <= STO_3;
-            STO_3: next_state <= STO_4;
-            STO_4: next_state <= S1;
+            STO_2: next_state <= S1;
+            // STO_3: next_state <= STO_4;
+            // STO_4: next_state <= S1;
 
             // PRE指令 / PRE instruction
             PRE_1: next_state <= PRE_2;
@@ -206,7 +206,7 @@ module controller(
             ac_source = 1'bZ; ac_en = 0; 
             
             alu_en = 0;  jump_en = 0; 
-        end else if (state == S1 || state == LDO_1 || state == LDA_1 || state == STO_1 || state == OPERAL_1 || state == JUMP_1) begin
+        end else if (state == S1 || state == OPERAL_1 || state == JUMP_1) begin
             pc_en = 0; 
             ir_en = 0; 
             rom_en = 1; 
@@ -228,7 +228,7 @@ module controller(
             
             ac_source = 1'bZ; ac_en = 0; 
             alu_en = 0;  jump_en = 0; 
-        end else if (state == S3 || state == LDO_2 || state == LDA_2 || state == STO_2 || state == OPERAL_2 || state == JUMP_2) begin
+        end else if (state == S3 || state == OPERAL_2 || state == JUMP_2) begin
             pc_en = 1; 
             ir_en = 0; 
             rom_en = 0; 
@@ -239,7 +239,7 @@ module controller(
             
             ac_source = 1'bZ; ac_en = 0; 
             alu_en = 0;  jump_en = 0; 
-        end else if (state == LDO_3) begin // S4
+        end else if (state == LDO_2) begin // S4
             pc_en = 0; 
             ir_en = 0; 
             rom_en = 1; 
@@ -250,7 +250,7 @@ module controller(
             
             ac_source = 1'bZ; ac_en = 0; 
             alu_en = 0;  jump_en = 0; 
-        end else if (state == LDA_3) begin // S5
+        end else if (state == LDA_2) begin // S5
             pc_en = 0; 
             ir_en = 0; 
             rom_en = 0; 
@@ -261,7 +261,7 @@ module controller(
             
             ac_source = 1'bZ; ac_en = 0; 
             alu_en = 0;  jump_en = 0; 
-        end else if (state == STO_4) begin // S6
+        end else if (state == STO_2) begin // S6
             pc_en = 0; 
             ir_en = 0; 
             rom_en = 0; 
@@ -273,7 +273,7 @@ module controller(
             ac_source = 1'bZ;  ac_en = 0; 
            
             alu_en = 0;  jump_en = 0; 
-        end else if (state == STO_3 || state == PRE_1 || state == OPERAL_3 || state == OPERAS_1 || state == JUMP_3) begin  // S7
+        end else if (state == LDO_1 || state == LDA_1 || state == STO_1 || state == PRE_1 || state == OPERAL_3 || state == OPERAS_1 || state == JUMP_3) begin  // S7
             pc_en = 0; 
             ir_en = 0; 
             rom_en = 0; 
@@ -284,27 +284,27 @@ module controller(
             
             ac_source = 1'bZ; ac_en = 0; 
             alu_en = 0;  jump_en = 0; 
-        end else if (state == LDO_4) begin  // S8
+        end else if (state == LDO_3) begin  // S8
             pc_en = 0; 
             ir_en = 0; 
             rom_en = 0; 
             
             w_r = 1'bZ; ram_en = 0; 
            
-            reg_source = 2'b01;  reg_en = 1; 
+            reg_source = 2'b00;  reg_en = 0; 
             
-            ac_source= 1'bZ; ac_en = 0; 
+            ac_source = 2'b10; ac_en = 1; 
             alu_en = 0;  jump_en = 0; 
-        end else if (state == LDA_4) begin  // S9
+        end else if (state == LDA_3) begin  // S9
             pc_en = 0; 
             ir_en = 0; 
             rom_en = 0; 
             
             w_r = 1'bZ; ram_en = 0; 
             
-            reg_source = 2'b10; reg_en = 1; 
+            reg_source = 2'b0; reg_en = 0; 
              
-            ac_source = 1'bZ; ac_en = 0;
+            ac_source = 2'b11; ac_en = 1;
             alu_en = 0;  jump_en = 0; 
         end else if (state == LDM_1) begin // S10
             pc_en = 0; 

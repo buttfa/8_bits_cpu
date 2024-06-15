@@ -32,6 +32,10 @@ module ram(
     // 8x256=2048(bits)=256(bytes)
     reg [7:0] ram [255:0];
 
+    initial begin
+        ram[0] = 8'b0000_0001;
+    end
+
     always @(posedge ram_en) begin
         if (w_r) begin // w_r为1时，进行读操作，更新输出数据 / When w_r is 1, perform a read operation to update the output data
             ram_out <= ram[addr];
