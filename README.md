@@ -2,7 +2,7 @@
 ### 8_bits_cpu
 
 # 设计思路 / Design ideas
-### 因为设计的是8位多周期CPU，所以选择部件分散连接的方式从而一定程度上降低每条指令所需的时钟周期。设计思路可以参考工程根目录下的8_bits_cpu.emmx(请使用MindMaster打开)。<br> Due to the design of an 8-bit multi cycle CPU, a decentralized connection method was chosen to reduce the clock cycle required for each instruction to a certain extent. The design concept can refer to 8'bits_cpu. emmx in the root directory of the project (please use MindMaster to open it).
+### 因为设计的是8位多周期CPU，所以选择部件分散连接的方式从而一定程度上降低每条指令所需的时钟周期。<br> Due to the design of an 8-bit multi cycle CPU, a decentralized connection method was chosen to reduce the clock cycle required for each instruction to a certain extent. 
 
 # 工程文件 / Project files
 ### 使用vivado创建和开发工程。其中设计文件位于.\8_bits_cpu.srcs\sources_1\new，仿真文件位于.\8_bits_cpu.srcs\sim_1\new。<br> Create and develop projects using Vivado. The design files are located at .\8'bits_cpu.srcs\sources_1\new, simulation file located at.\8'bits_cpu.srcs\sim_1\new.
