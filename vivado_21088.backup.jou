@@ -1,0 +1,83 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Sat Jun 15 16:18:30 2024
+# Process ID: 21088
+# Current directory: C:/application/8_bits/8_bits_cpu
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent15896 C:\application\8_bits\8_bits_cpu\8_bits_cpu.xpr
+# Log file: C:/application/8_bits/8_bits_cpu/vivado.log
+# Journal file: C:/application/8_bits/8_bits_cpu\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/application/8_bits/8_bits_cpu/8_bits_cpu.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+source cpu_test.tcl
+close_sim
+launch_simulation
+source cpu_test.tcl
+close_sim
+launch_simulation
+source cpu_test.tcl
+close_sim
+launch_simulation
+source cpu_test.tcl
+close_sim
+launch_simulation
+source cpu_test.tcl
+close_sim
+launch_simulation
+source cpu_test.tcl
+close_sim
+launch_simulation
+source cpu_test.tcl
+close_sim
+launch_simulation
+source cpu_test.tcl
+close_sim
+launch_simulation
+source cpu_test.tcl
+close_sim
+launch_simulation
+source cpu_test.tcl
+close_sim
+launch_simulation
+source cpu_test.tcl
+close_sim
+launch_simulation
+source cpu_test.tcl
+close_sim
+launch_simulation
+source cpu_test.tcl
+close_sim
+launch_simulation
+source cpu_test.tcl
+close_sim
+launch_simulation
+source cpu_test.tcl
+close_sim
+launch_simulation
+source cpu_test.tcl
+close_sim
+launch_simulation
+source cpu_test.tcl
+close_sim
+launch_simulation
+source cpu_test.tcl
+close_sim
+launch_simulation
+source cpu_test.tcl
+close_sim
+launch_simulation
+source cpu_test.tcl
+close_sim
+launch_simulation
+source cpu_test.tcl
+close_sim
+launch_simulation
+source cpu_test.tcl
+close_sim
+launch_simulation
+source cpu_test.tcl
+close_sim

@@ -28,6 +28,7 @@ module regs(
         input [7:0] rom_out, // 来自ROM的数据 / Data from ROM
         input [7:0] ram_out, // 来自RAM的数据 / Data from RAM
         input [7:0] ac_out, // 来自AC的数据 / Data from AC
+        input [7:0] pc_addr,
 
         output reg [7:0] reg_out // 寄存器输出的数据 / Register output data
     );
@@ -63,7 +64,8 @@ module regs(
             // 如果目标寄存器为R15/PC，则不进行修改操作
             // If the target register is R15/PC, no modification operation will be performed
             if (reg_addr == 4'b1111) begin
-                reg_out <= regs[reg_addr];
+                regs[reg_addr] <= pc_addr;
+                reg_out <= pc_addr;
             end else begin
                 case (reg_source)
                     REG_OUT: begin

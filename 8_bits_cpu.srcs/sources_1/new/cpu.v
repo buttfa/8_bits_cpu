@@ -133,6 +133,7 @@ module cpu(
         .rom_out(rom_out),
         .ram_out(ram_out),
         .ac_out(ac_out),
+        .pc_addr(pc_addr),
 
         .reg_out(reg_out)
     );
